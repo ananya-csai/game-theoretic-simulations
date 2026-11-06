@@ -1,0 +1,8 @@
+Rank,Strategy,Avg profit (no mistakes),Avg profit (5% mistakes),Low-spend share
+1,Grim Trigger,36.25,27.28,75%
+2,Pavlov,35.76,29.21,82%
+3,Tit-for-Tat,35.70,29.87,81%
+4,Generous TFT,35.55,29.99,83%
+5,Always Low,34.68,30.82,100%
+6,Random,28.19,28.10,49%
+7,Always High,25.70,26.91,0%

@@ -1,0 +1,4 @@
+Mechanism,Avg revenue,Std dev,Avg welfare,Revenue / welfare
+VCG (truthful),2.672,0.982,4.327,61.7%
+GSP (truthful bids),3.333,0.981,4.327,77.0%
+GSP (equilibrium bids),2.672,0.982,4.327,61.7%

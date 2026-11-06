@@ -1,0 +1,141 @@
+
+GAME-THEORETIC ANALYSIS OF ONLINE ADVERTISING COMPETITION
+Manipal University Jaipur — Game Theory course project
+
+==============================================================================
+  MODEL 1 — The advertising war (2 firms, Low vs High budget)
+==============================================================================
+  Market value M0 = ₹100 lakh, Low = ₹10 lakh, High = ₹30 lakh, share = s_i/(s_i+s_j)
+
+  Firm A \ Firm B | Low        | High      
+  ----------------+------------+-----------
+  Low             | 40.0, 40.0 | 15.0, 45.0
+  High            | 45.0, 15.0 | 20.0, 20.0
+
+  Pure Nash equilibrium : ['(High, High)']  -> profits 20, 20
+  Dominant strategy     : 'High' for both firms
+  Pareto-optimal cells  : ['(Low, Low)', '(Low, High)', '(High, Low)']
+  Game type             : Prisoner's Dilemma  (T=45 > R=40 > P=20 > S=15)
+  IESDS                 : Firm A: 'Low' is strictly dominated by 'High'
+  IESDS                 : Firm B: 'Low' is strictly dominated by 'High'
+  Joint profit lost at equilibrium: ₹40 lakh (50% of the cooperative outcome)
+
+  Three budget levels (10 / 25 / 40):
+
+  Firm A \ Firm B | Low (10)   | Medium (25) | High (40) 
+  ----------------+------------+-------------+-----------
+  Low (10)        | 40.0, 40.0 | 18.6, 46.4  | 10.0, 40.0
+  Medium (25)     | 46.4, 18.6 | 25.0, 25.0  | 13.5, 21.5
+  High (40)       | 40.0, 10.0 | 21.5, 13.5  | 10.0, 10.0
+
+  Nash equilibrium: ['(Medium (25), Medium (25))'] — the same ₹25 lakh each that the continuous model predicts.
+  Mixed-strategy search (support enumeration) finds 1 equilibrium in total -> it is unique.
+
+  Sensitivity (High budget 11–80, market growth 0–2):
+     Deadlock (High spend efficient)     49.4% of scenarios
+     Prisoner's Dilemma                  41.4% of scenarios
+     Harmony (Low spend dominant)         8.0% of scenarios
+     Boundary (ties)                      1.2% of scenarios
+
+==============================================================================
+  MODEL 1b — Repeated ad war (monthly budgets, 200 months)
+==============================================================================
+  Grim-trigger sustains (Low, Low) if the discount factor δ >= (T-R)/(T-P) = 0.20
+  Rank | Strategy     | Avg profit (no mistakes) | Avg profit (5% mistakes) | Low-spend share
+  -----+--------------+--------------------------+--------------------------+----------------
+  1    | Grim Trigger | 36.25                    | 27.28                    | 75%            
+  2    | Pavlov       | 35.76                    | 29.21                    | 82%            
+  3    | Tit-for-Tat  | 35.70                    | 29.87                    | 81%            
+  4    | Generous TFT | 35.55                    | 29.99                    | 83%            
+  5    | Always Low   | 34.68                    | 30.82                    | 100%           
+  6    | Random       | 28.19                    | 28.10                    | 49%            
+  7    | Always High  | 25.70                    | 26.91                    | 0%             
+
+==============================================================================
+  MODEL 2 — Continuous budgets: Tullock contest among n firms
+==============================================================================
+  Firm           | Cost per ₹ of ads | NE budget | Market share | Profit
+  ---------------+-------------------+-----------+--------------+-------
+  Firm 1 (c=1.0) | 1.0               | 24.84     | 45.9%        | 21.11 
+  Firm 2 (c=1.2) | 1.2               | 18.99     | 35.1%        | 12.34 
+  Firm 3 (c=1.5) | 1.5               | 10.23     | 18.9%        | 3.58  
+
+  Best-response dynamics after 15 rounds differ from the closed form by 0.00e+00
+  With costs (1.0, 1.5, 3.0): NE = [24. 16.  0.] -> the weakest firm stops advertising
+
+  n  | Spend per firm | Total spend | Profit per firm | Value lost to platform
+  ---+----------------+-------------+-----------------+-----------------------
+  2  | 25.00          | 50.00       | 25.00           | 50%                   
+  3  | 22.22          | 66.67       | 11.11           | 67%                   
+  4  | 18.75          | 75.00       | 6.25            | 75%                   
+  5  | 16.00          | 80.00       | 4.00            | 80%                   
+  6  | 13.89          | 83.33       | 2.78            | 83%                   
+  8  | 10.94          | 87.50       | 1.56            | 88%                   
+  10 | 9.00           | 90.00       | 1.00            | 90%                   
+  15 | 6.22           | 93.33       | 0.44            | 93%                   
+  20 | 4.75           | 95.00       | 0.25            | 95%                   
+
+==============================================================================
+  MODEL 3 — Keyword (sponsored search) auctions: GSP vs VCG vs GFP
+==============================================================================
+  Values per click (₹): Brand A=12, Brand B=10, Brand C=8, Brand D=6, Brand E=4
+  Click-through rates : slot 1 = 30%, slot 2 = 20%, slot 3 = 10%
+
+  Mechanism              | Bids              | Slot winners              | Price/click (slots 1-3) | Revenue | Welfare
+  -----------------------+-------------------+---------------------------+-------------------------+---------+--------
+  VCG (truthful)         | [12, 10, 8, 6, 4] | Brand A, Brand B, Brand C | 8.0, 7.0, 6.0           | 4.40    | 6.40   
+  GSP (truthful bids)    | [12, 10, 8, 6, 4] | Brand A, Brand B, Brand C | 10.0, 8.0, 6.0          | 5.20    | 6.40   
+  GSP (equilibrium bids) | [12, 8, 7, 6, 4]  | Brand A, Brand B, Brand C | 8.0, 7.0, 6.0           | 4.40    | 6.40   
+  GFP (truthful bids)    | [12, 10, 8, 6, 4] | Brand A, Brand B, Brand C | 12.0, 10.0, 8.0         | 6.40    | 6.40   
+
+  Truthful bidding an equilibrium under VCG?  True
+  Truthful bidding an equilibrium under GSP?  False
+     -> Brand A earns 0.60 bidding 12, but 0.80 by bidding ≈8 and dropping to slot 2.
+  EOS equilibrium bids [12.0, 8.0, 7.0, 6.0, 4.0] form a Nash equilibrium of GSP? True
+  Under GFP truthful bids leave every advertiser with zero profit, so they always shade -> no stable bids (Model 4).
+  EOS textbook example (values 10/4/2, clicks 200/199): truthful profit 1200 vs 1592 after shading to ≈2
+
+  Monte Carlo: 10,000 auctions, 5 bidders, values ~ U[0, 10]
+
+  Mechanism              | Avg revenue | Std dev | Avg welfare | Revenue / welfare
+  -----------------------+-------------+---------+-------------+------------------
+  VCG (truthful)         | 2.672       | 0.982   | 4.327       | 61.7%            
+  GSP (truthful bids)    | 3.333       | 0.981   | 4.327       | 77.0%            
+  GSP (equilibrium bids) | 2.672       | 0.982   | 4.327       | 61.7%            
+
+==============================================================================
+  MODEL 4 — Bidding dynamics: why the industry moved from GFP to GSP
+==============================================================================
+  GFP (2 advertisers, values 10 and 8): bids climb to ₹3.4 then crash to the ₹0.5 reserve.
+  Number of crashes in 400 revisions: 13  -> bids never settle (no pure-strategy equilibrium)
+  GSP balanced bidding: 20/20 random starting points converge to the EOS equilibrium bids
+  Median updates to converge: 30; final revenue = ₹4.40 = VCG revenue ₹4.40
+
+==============================================================================
+  MODEL 5 — Display-ad auctions (real-time bidding) and platform design
+==============================================================================
+  Bidders n | Best shading (simulated) | Theory (n-1)/n
+  ----------+--------------------------+---------------
+  2         | 0.50                     | 0.50          
+  3         | 0.67                     | 0.67          
+  5         | 0.80                     | 0.80          
+
+  n  | First-price revenue | Second-price revenue | Theory (n-1)/(n+1)
+  ---+---------------------+----------------------+-------------------
+  2  | 0.3335              | 0.3334               | 0.3333            
+  3  | 0.5000              | 0.5006               | 0.5000            
+  4  | 0.5998              | 0.5995               | 0.6000            
+  5  | 0.6668              | 0.6675               | 0.6667            
+  7  | 0.7499              | 0.7498               | 0.7500            
+  10 | 0.8179              | 0.8180               | 0.8182            
+
+  Optimal reserve (n = 2): r* = 0.50; revenue 0.3333 -> 0.4167 (+25.0%), impression unsold 25% of the time
+
+==============================================================================
+  DONE
+==============================================================================
+  Figures : outputs/figures/
+  Tables  : outputs/tables/
+  Numbers : outputs/results.json
+  Time    : 4.0 s
+

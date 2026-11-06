@@ -1,0 +1,463 @@
+{
+  "model1": {
+    "payoff_A": [
+      [
+        40.0,
+        15.0
+      ],
+      [
+        45.0,
+        20.0
+      ]
+    ],
+    "payoff_B": [
+      [
+        40.0,
+        45.0
+      ],
+      [
+        15.0,
+        20.0
+      ]
+    ],
+    "nash": [
+      [
+        1,
+        1
+      ]
+    ],
+    "type": "Prisoner's Dilemma",
+    "T": 45.0,
+    "R": 40.0,
+    "P": 20.0,
+    "S": 15.0,
+    "joint_loss": 40.0,
+    "three_level_payoff": [
+      [
+        40.0,
+        18.57142857142857,
+        10.0
+      ],
+      [
+        46.42857142857143,
+        25.0,
+        13.461538461538467
+      ],
+      [
+        40.0,
+        21.53846153846154,
+        10.0
+      ]
+    ],
+    "three_level_nash": [
+      [
+        1,
+        1
+      ]
+    ],
+    "game_type_shares": {
+      "Prisoner's Dilemma": 0.41358024691358025,
+      "Harmony (Low spend dominant)": 0.08024691358024691,
+      "Deadlock (High spend efficient)": 0.49382716049382713,
+      "Boundary (ties)": 0.012345679012345678
+    },
+    "critical_delta": 0.2,
+    "tournament_clean": [
+      [
+        "Grim Trigger",
+        36.253571428571426
+      ],
+      [
+        "Pavlov",
+        35.76428571428571
+      ],
+      [
+        "Tit-for-Tat",
+        35.69642857142857
+      ],
+      [
+        "Generous TFT",
+        35.55357142857143
+      ],
+      [
+        "Always Low",
+        34.67857142857143
+      ],
+      [
+        "Random",
+        28.185714285714287
+      ],
+      [
+        "Always High",
+        25.696428571428573
+      ]
+    ],
+    "tournament_noisy": [
+      [
+        "Always Low",
+        30.817857142857143
+      ],
+      [
+        "Generous TFT",
+        29.98928571428571
+      ],
+      [
+        "Tit-for-Tat",
+        29.871428571428567
+      ],
+      [
+        "Pavlov",
+        29.207142857142856
+      ],
+      [
+        "Random",
+        28.099999999999998
+      ],
+      [
+        "Grim Trigger",
+        27.27857142857143
+      ],
+      [
+        "Always High",
+        26.914285714285715
+      ]
+    ]
+  },
+  "model2": {
+    "V": 100.0,
+    "costs": [
+      1.0,
+      1.2,
+      1.5
+    ],
+    "ne": [
+      24.83564645726808,
+      18.991964937910886,
+      10.226442658875094
+    ],
+    "profits": [
+      21.11029948867787,
+      12.344777209642075,
+      3.5792549306062824
+    ],
+    "br_error": 0.0,
+    "dropout_ne": [
+      24.0,
+      16.0,
+      0.0
+    ],
+    "symmetric": [
+      {
+        "n": 2,
+        "spend_per_firm": 25.0,
+        "total_spend": 50.0,
+        "profit_per_firm": 25.0,
+        "industry_profit": 50.0,
+        "dissipation_ratio": 0.5
+      },
+      {
+        "n": 3,
+        "spend_per_firm": 22.22222222222222,
+        "total_spend": 66.66666666666666,
+        "profit_per_firm": 11.111111111111114,
+        "industry_profit": 33.33333333333334,
+        "dissipation_ratio": 0.6666666666666665
+      },
+      {
+        "n": 4,
+        "spend_per_firm": 18.75,
+        "total_spend": 75.0,
+        "profit_per_firm": 6.25,
+        "industry_profit": 25.0,
+        "dissipation_ratio": 0.75
+      },
+      {
+        "n": 5,
+        "spend_per_firm": 16.0,
+        "total_spend": 80.0,
+        "profit_per_firm": 4.0,
+        "industry_profit": 20.0,
+        "dissipation_ratio": 0.8
+      },
+      {
+        "n": 6,
+        "spend_per_firm": 13.88888888888889,
+        "total_spend": 83.33333333333334,
+        "profit_per_firm": 2.7777777777777786,
+        "industry_profit": 16.666666666666657,
+        "dissipation_ratio": 0.8333333333333335
+      },
+      {
+        "n": 8,
+        "spend_per_firm": 10.9375,
+        "total_spend": 87.5,
+        "profit_per_firm": 1.5625,
+        "industry_profit": 12.5,
+        "dissipation_ratio": 0.875
+      },
+      {
+        "n": 10,
+        "spend_per_firm": 9.0,
+        "total_spend": 90.0,
+        "profit_per_firm": 1.0,
+        "industry_profit": 10.0,
+        "dissipation_ratio": 0.9
+      },
+      {
+        "n": 15,
+        "spend_per_firm": 6.222222222222222,
+        "total_spend": 93.33333333333333,
+        "profit_per_firm": 0.44444444444444464,
+        "industry_profit": 6.666666666666671,
+        "dissipation_ratio": 0.9333333333333332
+      },
+      {
+        "n": 20,
+        "spend_per_firm": 4.75,
+        "total_spend": 95.0,
+        "profit_per_firm": 0.25,
+        "industry_profit": 5.0,
+        "dissipation_ratio": 0.95
+      }
+    ]
+  },
+  "model3": {
+    "values": [
+      12.0,
+      10.0,
+      8.0,
+      6.0,
+      4.0
+    ],
+    "ctr": [
+      0.3,
+      0.2,
+      0.1
+    ],
+    "eos_bids": [
+      12.0,
+      8.0,
+      7.0,
+      6.000000000000001,
+      4.0
+    ],
+    "example_revenue": {
+      "VCG (truthful)": 4.399999999999999,
+      "GSP (truthful bids)": 5.199999999999999,
+      "GSP (equilibrium bids)": 4.4
+    },
+    "vcg_truthful_is_ne": true,
+    "gsp_truthful_is_ne": false,
+    "eos_is_ne": true,
+    "deviation": {
+      "bidder": 0,
+      "current_utility": 0.5999999999999996,
+      "best_utility": 0.8000000000000003,
+      "best_bid": 8.000001,
+      "gain": 0.20000000000000062
+    },
+    "eos_textbook": {
+      "bidder": 0,
+      "current_utility": 1200.0,
+      "best_utility": 1592.0,
+      "best_bid": 2.000001,
+      "gain": 392.0
+    },
+    "monte_carlo": {
+      "VCG (truthful)": {
+        "revenue": 2.6718665957735612,
+        "revenue_sd": 0.9824527843880673,
+        "welfare": 4.326959302464789
+      },
+      "GSP (truthful bids)": {
+        "revenue": 3.3327385530258127,
+        "revenue_sd": 0.980864708350947,
+        "welfare": 4.326959302464789
+      },
+      "GSP (equilibrium bids)": {
+        "revenue": 2.6718665957735612,
+        "revenue_sd": 0.9824527843880673,
+        "welfare": 4.326959302464789
+      }
+    },
+    "trials": 10000
+  },
+  "model4": {
+    "gfp_peak": 3.4,
+    "gfp_crashes": 13,
+    "gfp_mean_revenue": 3.1201999999999996,
+    "gsp_runs": [
+      {
+        "seed": 0,
+        "final_revenue": 4.4,
+        "converged_at": 28,
+        "matches_eos": true
+      },
+      {
+        "seed": 1,
+        "final_revenue": 4.4,
+        "converged_at": 19,
+        "matches_eos": true
+      },
+      {
+        "seed": 2,
+        "final_revenue": 4.4,
+        "converged_at": 21,
+        "matches_eos": true
+      },
+      {
+        "seed": 3,
+        "final_revenue": 4.4,
+        "converged_at": 32,
+        "matches_eos": true
+      },
+      {
+        "seed": 4,
+        "final_revenue": 4.4,
+        "converged_at": 11,
+        "matches_eos": true
+      },
+      {
+        "seed": 5,
+        "final_revenue": 4.4,
+        "converged_at": 34,
+        "matches_eos": true
+      },
+      {
+        "seed": 6,
+        "final_revenue": 4.4,
+        "converged_at": 25,
+        "matches_eos": true
+      },
+      {
+        "seed": 7,
+        "final_revenue": 4.4,
+        "converged_at": 29,
+        "matches_eos": true
+      },
+      {
+        "seed": 8,
+        "final_revenue": 4.4,
+        "converged_at": 36,
+        "matches_eos": true
+      },
+      {
+        "seed": 9,
+        "final_revenue": 4.4,
+        "converged_at": 32,
+        "matches_eos": true
+      },
+      {
+        "seed": 10,
+        "final_revenue": 4.4,
+        "converged_at": 36,
+        "matches_eos": true
+      },
+      {
+        "seed": 11,
+        "final_revenue": 4.4,
+        "converged_at": 34,
+        "matches_eos": true
+      },
+      {
+        "seed": 12,
+        "final_revenue": 4.4,
+        "converged_at": 21,
+        "matches_eos": true
+      },
+      {
+        "seed": 13,
+        "final_revenue": 4.4,
+        "converged_at": 19,
+        "matches_eos": true
+      },
+      {
+        "seed": 14,
+        "final_revenue": 4.4,
+        "converged_at": 33,
+        "matches_eos": true
+      },
+      {
+        "seed": 15,
+        "final_revenue": 4.4,
+        "converged_at": 35,
+        "matches_eos": true
+      },
+      {
+        "seed": 16,
+        "final_revenue": 4.4,
+        "converged_at": 23,
+        "matches_eos": true
+      },
+      {
+        "seed": 17,
+        "final_revenue": 4.4,
+        "converged_at": 41,
+        "matches_eos": true
+      },
+      {
+        "seed": 18,
+        "final_revenue": 4.4,
+        "converged_at": 29,
+        "matches_eos": true
+      },
+      {
+        "seed": 19,
+        "final_revenue": 4.4,
+        "converged_at": 32,
+        "matches_eos": true
+      }
+    ],
+    "gsp_converged": 20,
+    "vcg_revenue": 4.399999999999999
+  },
+  "model5": {
+    "shading": {
+      "2": 0.5,
+      "3": 0.67,
+      "5": 0.8
+    },
+    "revenue_equivalence": [
+      {
+        "n": 2,
+        "first_price": 0.3334604984906283,
+        "second_price": 0.3333841898515306,
+        "theory": 0.3333333333333333
+      },
+      {
+        "n": 3,
+        "first_price": 0.5000288272512564,
+        "second_price": 0.5005979779042738,
+        "theory": 0.5
+      },
+      {
+        "n": 4,
+        "first_price": 0.5997902216943687,
+        "second_price": 0.5995401503469373,
+        "theory": 0.6
+      },
+      {
+        "n": 5,
+        "first_price": 0.6668496642498052,
+        "second_price": 0.6674506807503288,
+        "theory": 0.6666666666666666
+      },
+      {
+        "n": 7,
+        "first_price": 0.7498939697441616,
+        "second_price": 0.7497907846203944,
+        "theory": 0.75
+      },
+      {
+        "n": 10,
+        "first_price": 0.8179287729130366,
+        "second_price": 0.8180466301392109,
+        "theory": 0.8181818181818182
+      }
+    ],
+    "reserve_opt": 0.5,
+    "reserve_rev0": 0.33333333333333326,
+    "reserve_rev_opt": 0.41666666666666674,
+    "unsold": 0.25
+  }
+}

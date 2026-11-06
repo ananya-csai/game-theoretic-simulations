@@ -1,0 +1,5 @@
+Mechanism,Bids,Slot winners,Price/click (slots 1-3),Revenue,Welfare
+VCG (truthful),"[12, 10, 8, 6, 4]","Brand A, Brand B, Brand C","8.0, 7.0, 6.0",4.40,6.40
+GSP (truthful bids),"[12, 10, 8, 6, 4]","Brand A, Brand B, Brand C","10.0, 8.0, 6.0",5.20,6.40
+GSP (equilibrium bids),"[12, 8, 7, 6, 4]","Brand A, Brand B, Brand C","8.0, 7.0, 6.0",4.40,6.40
+GFP (truthful bids),"[12, 10, 8, 6, 4]","Brand A, Brand B, Brand C","12.0, 10.0, 8.0",6.40,6.40

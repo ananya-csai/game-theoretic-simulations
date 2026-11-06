@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+collecting ... collected 20 items
+
+tests/test_models.py::test_prisoners_dilemma_structure PASSED            [  5%]
+tests/test_models.py::test_mixed_equilibrium_matching_pennies PASSED     [ 10%]
+tests/test_models.py::test_mixed_equilibria_match_nashpy PASSED          [ 15%]
+tests/test_models.py::test_three_level_game_matches_continuous_ne PASSED [ 20%]
+tests/test_models.py::test_tournament_reciprocity_beats_always_high PASSED [ 25%]
+tests/test_models.py::test_tullock_symmetric_closed_form PASSED          [ 30%]
+tests/test_models.py::test_tullock_asymmetric_is_equilibrium PASSED      [ 35%]
+tests/test_models.py::test_best_response_dynamics_converge PASSED        [ 40%]
+tests/test_models.py::test_high_cost_firm_drops_out PASSED               [ 45%]
+tests/test_models.py::test_vcg_truthful_is_equilibrium PASSED            [ 50%]
+tests/test_models.py::test_gsp_truthful_not_equilibrium_eos_example PASSED [ 55%]
+tests/test_models.py::test_eos_equilibrium_is_nash_and_equals_vcg PASSED [ 60%]
+tests/test_models.py::test_vcg_prices_formula_matches_generic_vcg PASSED [ 65%]
+tests/test_models.py::test_gsp_revenue_with_truthful_bids_is_at_least_vcg PASSED [ 70%]
+tests/test_models.py::test_quality_score_ranking PASSED                  [ 75%]
+tests/test_models.py::test_gfp_never_settles PASSED                      [ 80%]
+tests/test_models.py::test_gsp_balanced_bidding_converges_to_vcg PASSED  [ 85%]
+tests/test_models.py::test_bid_shading_optimum PASSED                    [ 90%]
+tests/test_models.py::test_revenue_equivalence PASSED                    [ 95%]
+tests/test_models.py::test_optimal_reserve_is_half PASSED                [100%]
+
+============================== 20 passed in 1.11s ==============================
