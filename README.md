@@ -113,8 +113,8 @@ High is better whatever the rival does (45 > 40 and 20 > 15), so both firms spen
 Requires **Python 3.10 or newer**.
 
 ```bash
-git clone https://github.com/ananya-csai/game-thoretic-simulations.git
-cd game-thoretic-simulations
+git clone https://github.com/ananya-csai/game-theoretic-simulations.git
+cd game-theoretic-simulations
 pip install -r requirements.txt
 
 python main.py            # runs every experiment (~5 s), prints results, saves figures and tables
